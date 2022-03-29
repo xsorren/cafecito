@@ -1,15 +1,15 @@
 import Header from './components/Header';
-import Blog from './components/Blog';
+import Cursos from './components/Cursos';
 import Footer from './components/Footer';
 import Contacto from './components/Contacto';
-import Datos from './components/Datos';
+import Blog from './components/Blog';
 
 const App = () => {
   return (
     <>
     <Header />
-    <Datos />
     <Blog />
+    <Cursos />
     <Contacto />
     <Footer />
     </>

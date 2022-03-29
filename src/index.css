@@ -2,7 +2,7 @@
   --fuenteHeading: 'PT Sans', sans-serif;
   --fuenteParrafos: 'Open Sans', sans-serif;
 
-  --primario: #5a3a2d;
+  --primario: #3a1300;
   --gris: #e1e1e1;
   --blanco: #ffffff;
   --negro: #000000;
@@ -86,16 +86,15 @@ img {
   margin-right: 0.5rem;
 }
 .swipe {
-  display: block;
+  display: inline;
   color: var(--blanco);
-  position: relative;
   animation: swiped 5s;
-  margin-top: 36rem;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }
-@media (min-width: 768px){
-.swipe {
-}
-}
+
 @keyframes swiped {
   0% {opacity: 0;
 }
@@ -130,6 +129,10 @@ img {
   height: 4px;
   background-color: rgb(255, 255, 255);
   margin: 6px 0px;
+}
+.header__texto p{
+  margin-left: 1.5rem; 
+  margin-right: 1.5rem;
 }
 @media only screen and  (min-width: 768px) {
   .header__texto h2 {
@@ -188,13 +191,6 @@ img {
 navegacion__enlace:hover {
     background-color: var(--primario);
     color: var(--blanco);
-}
-@media only screen and (min-width: 768px) {
-  .principal {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      column-gap: 4rem;
-  }
 }
 
 .entrada {
@@ -261,6 +257,26 @@ a:hover {
 .widget-curso__info {
   font-size: 2rem;
 }
+@media (min-width: 768px){
+  .info {
+    justify-content: center;
+  }
+  .cursos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .widget-curso {
+    margin-top: 10rem;
+  }
+  .widget-curso h4 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  .widget-curso a {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
 
 .footer {
   background-color: var(--negro);
@@ -268,24 +284,9 @@ a:hover {
   margin-top: 4rem;
 }
 
-@media only screen and (min-width: 768px) {
-  .sobre-nosotros {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 2rem;
-  }
-}
-
 .curso {
   padding: 3rem 0;
   border-bottom: 1px solid var(--gris);
-}
-@media only screen and (min-width: 768px) {
-  .curso {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      column-gap: 2rem;
-  }
 }
 
 .curso__label {
@@ -335,7 +336,7 @@ a:hover {
 .datos {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 }
 .botonInput {
@@ -351,3 +352,24 @@ a:hover {
   border: none;
   width: 100%;
 }
+ul img {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  ul img {
+    display: none;
+  }
+}
+section h3 {
+  margin-bottom: 50px; 
+  margin-top: 25px;
+}
+@media (min-width: 768px) {
+  section ul{
+    margin-top: 0;
+  }
+  section h3 {
+    margin-bottom: 0; 
+    margin-top: 25px;
+}}
