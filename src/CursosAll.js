@@ -39,7 +39,7 @@ const CursosAll = () => {
         <div class="datos">
         <ul className="cursos no-padding">
         <Cursito titulo="Técnicas de extracción de café" precio="$15" cupo="7" imagen={Img1}/>
-        <Cursito titulo="Taller para Tostar y Moler Granos" precio="$10" cupo="13" imagen={Img2}/>
+        <Cursito titulo="Aprende a Moler Granos" precio="$10" cupo="13" imagen={Img2}/>
         <Cursito titulo="Las Mejores Recetas de Café" precio="$25" cupo="4" imagen={Img3}/>
         </ul>
         </div>
