@@ -1,7 +1,7 @@
 import background from '../img/banner.jpg'
-import Nav from './Nav';
-
-const Header = () => {
+import { useNavigate } from 'react-router-dom';
+  const Header = () => {
+      let navigate = useNavigate();
     return (
             <header className="header" style={{ backgroundImage: `url(${background})`}}>
             <div className="contenedor">
@@ -9,7 +9,11 @@ const Header = () => {
                     <a className="logo">
                         <h1 className="logo__nombre no-margin centrar-texto">Blog<span className="logo__bold">DeCafé</span></h1>
                     </a>
-                    <Nav />
+                    <nav className='navegacion'>
+            <a onClick={() => navigate("/Nosotros")} className="navegacion__enlace">Nosotros</a>
+            <a onClick={() => navigate("/Cursos")} className="navegacion__enlace">Cursos</a>
+            <a className="navegacion__enlace">Contacto</a>
+        </nav>
                 </div>
             </div>
 
