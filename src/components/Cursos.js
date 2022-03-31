@@ -1,6 +1,8 @@
 
 import cafe from '../img/cafecito.png'
+import { useNavigate } from 'react-router-dom';
 const Curso = ({ titulo, precio, cupo }) => {
+    let navigate = useNavigate();
     return (
         <div className="centrar-texto">
         <li className="widget-curso">
@@ -13,7 +15,7 @@ const Curso = ({ titulo, precio, cupo }) => {
             <span className="widget-curso__info">{" " + cupo}</span>
         </p>
         </div>
-        <a style={{marginLeft: 50, marginRight: 50}} className="boton boton--secundario">Más Información sobre nuestros cursos</a>
+        <a onClick={() => navigate("/Cursos")} style={{marginLeft: 50, marginRight: 50}} className="boton boton--secundario">Más Información sobre nuestros cursos</a>
         </li>
         </div>
       );
