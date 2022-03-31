@@ -1,6 +1,6 @@
 const Contacto = () => {
     return (
-    <div classNameName="contenedor">
+    <div id="contacto" className="contenedor">
         <h3 className="centrar-texto">Contacto</h3>
 
         <div className="contacto-bg"></div>

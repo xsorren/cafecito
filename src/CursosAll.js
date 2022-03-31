@@ -1,71 +1,66 @@
-import Footer from "./components/Footer";
 import Img1 from "./img/curso1.jpg"
 import Img2 from "./img/curso2.jpg"
 import Img3 from "./img/curso3.jpg"
+import { useNavigate } from 'react-router-dom';
 
-const CursosAll = () => {
+const Cursito = ( { imagen, titulo, precio, cupo }) => {
     return (
         <>
-        <main className="contenedor">
-        <h3 className="centrar-texto">Nuestros Próximos Cursos y Talleres</h3>
-
-        <div className="curso">
-            <div className="curso__imagen">
-                <img src={Img1} alt="Imagen del curso" />
-            </div>
-            <div className="curso__informacion">
-                <h4 className="no-margin">Técnicas de extracción de café</h4>
-                <p className="curso__label">Precio: 
-                    <span className="curso__info">Gratis</span>
-                </p>
-                <p className="curso__label">Cupo: 
-                    <span className="curso__info"> 20</span>
-                </p>
-                <p className="curso__descripcion">
-                    Donec tempor, nisl et rhoncus viverra, turpis enim convallis ligula, non hendrerit nulla tortor nec odio. Morbi non mattis nunc, elementum auctor arcu. Aliquam vestibulum arcu non sem porta auctor. Nam vel congue ligula, eu condimentum felis. Nunc aliquam hendrerit odio sit amet venenatis. Nunc varius, libero a tempor rutrum, nulla risus congue velit, nec suscipit nibh lectus ac dolor. Nulla facilisi.
-                </p>
-            </div>
+        <article style={{marginLeft: 20, marginRight: 20, borderBottom: 'none'}}className="entrada">
+        <div className="entrada__imagen">
+            <picture>
+                <img loading="lazy" src={imagen} alt="imagen blog" /> 
+            </picture>
+        </div>
+        <div className="centrar-texto">
+        <li className="widget-curso" style={{marginTop: 5}}>
+        <h4 style={{marginBottom: 25, marginTop: 25}} className="centrar-texto">{titulo}</h4>
+        <div className='info'>
+        <p style={{paddingLeft : 20, paddingRight : 20, margin: 0}} className="widget-curso__label">Precio: 
+            <span className="widget-curso__info">{" " + precio}</span>
+        </p>
+        <p style={{paddingLeft : 20, paddingRight : 20, margin: 0}} className="widget-curso__label">Cupo: 
+            <span className="widget-curso__info">{" " + cupo}</span>
+        </p>
+        </div>
+        <a style={{display: 'block', marginLeft: 50, marginRight: 50}} className="boton boton--secundario">Inscribirse</a>
+        </li>
+        </div>
+        </article>
+        </>
+      );
+}
+const CursosAll = () => {
+    let navigate = useNavigate();
+    return (
+        <>
+        <div className="contenedor">
+        <h3 class="centrar-texto">Nuestros Próximos Cursos y Talleres</h3>
+        <div class="datos">
+        <ul className="cursos no-padding">
+        <Cursito titulo="Técnicas de extracción de café" precio="$15" cupo="7" imagen={Img1}/>
+        <Cursito titulo="Taller para Tostar y Moler Granos" precio="$10" cupo="13" imagen={Img2}/>
+        <Cursito titulo="Las Mejores Recetas de Café" precio="$25" cupo="4" imagen={Img3}/>
+        </ul>
+        </div>
         </div>
 
-        <div className="curso">
-            <div className="curso__imagen">
-                <img src={Img2} alt="Imagen del curso" />
-            </div>
-            <div className="curso__informacion">
-                <h4 className="no-margin">Taller para Tostar y Moler Granos</h4>
-                <p className="curso__label">Precio: 
-                    <span className="curso__info">Gratis</span>
-                </p>
-                <p className="curso__label">Cupo: 
-                    <span className="curso__info">20</span>
-                </p>
-                <p className="curso__descripcion">
-                    Donec tempor, nisl et rhoncus viverra, turpis enim convallis ligula, non hendrerit nulla tortor nec odio. Morbi non mattis nunc, elementum auctor arcu. Aliquam vestibulum arcu non sem porta auctor. Nam vel congue ligula, eu condimentum felis. Nunc aliquam hendrerit odio sit amet venenatis. Nunc varius, libero a tempor rutrum, nulla risus congue velit, nec suscipit nibh lectus ac dolor. Nulla facilisi.
-                </p>
-            </div> 
-        </div> 
-
-        <div className="curso">
-            <div className="curso__imagen">
-                <img src={Img3} alt="Imagen del curso" />
-            </div>
-            <div className="curso__informacion">
-                <h4 className="no-margin">4 Recetas de Café para Principiantes</h4>
-                <p className="curso__label">Precio: 
-                    <span className="curso__info">Gratis</span>
-                </p>
-                <p className="curso__label">Cupo: 
-                    <span className="curso__info">20</span>
-                </p>
-                <p className="curso__descripcion">
-                    Donec tempor, nisl et rhoncus viverra, turpis enim convallis ligula, non hendrerit nulla tortor nec odio. Morbi non mattis nunc, elementum auctor arcu. Aliquam vestibulum arcu non sem porta auctor. Nam vel congue ligula, eu condimentum felis. Nunc aliquam hendrerit odio sit amet venenatis. Nunc varius, libero a tempor rutrum, nulla risus congue velit, nec suscipit nibh lectus ac dolor. Nulla facilisi.
-                </p>
-            </div> 
-        </div> 
-
         
-    </main>
-    <Footer />
+
+    <footer style={{marginTop: '2rem'}} className="footer">
+        <div className="contenedor">
+            <div className="barra">
+                <a className="logo">
+                    <h1 className="logo__nombre no-margin centrar-texto">Blog<span className="logo__bold">DeCafé</span></h1>
+                </a>
+
+                <nav className="navegacion">
+                    <a onClick={() => navigate("/Nosotros")} className="navegacion__enlace">Nosotros</a> 
+                    <a onClick={() => navigate("/")} className="navegacion__enlace">Inicio</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
     </>
       );
 }

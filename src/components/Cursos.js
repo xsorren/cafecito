@@ -13,7 +13,7 @@ const Curso = ({ titulo, precio, cupo }) => {
             <span className="widget-curso__info">{" " + cupo}</span>
         </p>
         </div>
-        <a style={{marginLeft: 50, marginRight: 50}} href="entrada.html" className="boton boton--secundario">Más Información sobre nuestros cursos</a>
+        <a style={{marginLeft: 50, marginRight: 50}} className="boton boton--secundario">Más Información sobre nuestros cursos</a>
         </li>
         </div>
       );
@@ -26,7 +26,7 @@ const Cursos = () => {
 
             <ul className="cursos no-padding">
                 <Curso titulo="Técnicas de Extracción de Café" precio="Gratis" cupo="20"/>
-                <img src={cafe} width="350px" height="350px" />
+                <img className='fotito' src={cafe} width="350px" height="350px" />
                 <Curso titulo="4 Recetas de Café para Principiantes" precio="$5" cupo="10" />
             </ul>
         </section>

@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
                     <nav className='navegacion'>
             <a onClick={() => navigate("/Nosotros")} className="navegacion__enlace">Nosotros</a>
             <a onClick={() => navigate("/Cursos")} className="navegacion__enlace">Cursos</a>
-            <a className="navegacion__enlace">Contacto</a>
+            <a href='#contacto' className="navegacion__enlace">Contacto</a>
         </nav>
                 </div>
             </div>

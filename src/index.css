@@ -179,8 +179,16 @@ img {
 @media only screen and (min-width: 768px) {
   .navegacion {
     flex-direction: row;
-    margin-top: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
 }
+}
+@media (min-width: 768px){
+  .nosotrosPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
 }
 .navegacion__enlace {
   display: inline;
@@ -284,6 +292,18 @@ a:hover {
   padding-bottom: 3rem;
   margin-top: 4rem;
 }
+.footerPage {
+  background-color: var(--negro);
+  padding-bottom: 3rem;
+  margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  .footerPage {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  }
+}
 
 .curso {
   padding: 3rem 0;
@@ -358,7 +378,7 @@ ul img {
   margin-right: auto;
 }
 @media (max-width: 768px) {
-  ul img {
+  .fotito {
     display: none;
   }
 }

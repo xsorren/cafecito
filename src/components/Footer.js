@@ -1,4 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 const Footer = () => {
+    let navigate = useNavigate();
     return (
             <footer className="footer">
         <div className="contenedor">
@@ -8,8 +10,8 @@ const Footer = () => {
                 </a>
 
                 <nav className="navegacion">
-                    <a className="navegacion__enlace">Nosotros</a>
-                    <a className="navegacion__enlace">Cursos</a>
+                <a onClick={() => navigate("/Nosotros")} className="navegacion__enlace">Nosotros</a> 
+                <a onClick={() => navigate("/Cursos")} className="navegacion__enlace">Cursos</a>
                 </nav>
             </div>
         </div>
