@@ -1,4 +1,10 @@
+import {animateScroll as scroll } from "react-scroll";
+
 const Contacto = () => {
+    const scrollToTop = (e) => {
+        e.preventDefault();
+        scroll.scrollToTop();
+    };
     return (
     <div id="contacto" className="contenedor">
         <h3 className="centrar-texto">Contacto</h3>
@@ -33,7 +39,7 @@ const Contacto = () => {
             </div>
 
             <div className="enviar">
-                <input type="submit" value="Enviar" className="botonInput boton--primario" />
+                <input type="submit" onClick={scrollToTop} value="Enviar" className="botonInput boton--primario" />
             </div>
         </form>
     </div>

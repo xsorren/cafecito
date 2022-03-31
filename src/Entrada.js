@@ -14,7 +14,7 @@ const Entrada = () => {
         <footer className="footerPage">
         <div className="contenedor">
             <div className="barra">
-                <a className="logo">
+                <a className="logo" onClick={() => navigate("/")}>
                     <h1 className="logo__nombre no-margin centrar-texto">Blog<span className="logo__bold">DeCafé</span></h1>
                 </a>
 
