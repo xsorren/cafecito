@@ -22,7 +22,7 @@ const Contacto = () => {
                 />
             </div>
             <div className="campo">
-                <label style={{marginRight: 20}} className="campo__label" for="nombre">E-mail</label>
+                <label style={{marginRight: '2rem'}} className="campo__label" for="nombre">E-mail</label>
                 <input
                     className="campo__field"
                     type="text" 
@@ -39,7 +39,7 @@ const Contacto = () => {
             </div>
 
             <div className="enviar">
-                <input type="submit" onClick={scrollToTop} value="Enviar" className="botonInput boton--primario" />
+                <input type="submit" onSubmit={scrollToTop} value="Enviar" className="botonInput boton--primario" />
             </div>
         </form>
     </div>
