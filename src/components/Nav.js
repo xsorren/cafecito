@@ -1,5 +1,3 @@
-import Entrada from "../Entrada.js";
-import Cursos from "../Cursos.js";
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 const Nav = () => {

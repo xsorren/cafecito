@@ -94,6 +94,15 @@ img {
   text-align: center;
   width: 100%;
 }
+.flecha {
+  display: inline;
+  color: var(--blanco);
+  animation: swiped 5s;
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
 
 @keyframes swiped {
   0% {opacity: 0;
@@ -208,12 +217,33 @@ img {
   font-size: 1.8rem;
   color: var(--blanco);
   padding: 0.3rem 1rem;
+  position: relative;
 }
-navegacion__enlace:hover {
-    background-color: var(--primario);
-    color: var(--blanco);
+@media (min-width: 768px) {
+  .navegacion__enlace {
+    padding: 0 0.1rem;
+    margin-right: 1.8rem;
+  }
+  .navegacion__enlace:last-of-type {
+    margin-right: 0;
+  }
+  .navegacion__enlace:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
-
+.navegacion__enlace:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+}  
 .entrada {
   border-bottom: 1px solid var(--gris);
   margin-bottom: 2rem;

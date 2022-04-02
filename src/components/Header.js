@@ -24,8 +24,9 @@ import { useNavigate } from 'react-router-dom';
                 <h2>Blog de café con consejos y cursos</h2>
                 <p>Aprende de los expertos con las mejores recetas y consejos</p>
             </div>
-            <div className="swipe">
-                <p><span>Deslizá ⤵</span></p>
+            <div>
+                <p className='flecha'>^</p>
+                <p className="swipe"><span>Deslizá</span></p>
             </div>
         </header>
       );
